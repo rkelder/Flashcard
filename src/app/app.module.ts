@@ -10,6 +10,7 @@ import { FlashcardDisplayComponent } from './flashcards/flashcard-display/flashc
 import { FlashcardListsComponent } from './flashcard-list-overview/flashcard-lists/flashcard-lists.component';
 import { FlashcardListDetailComponent } from './flashcard-list-overview/flashcard-list-detail/flashcard-list-detail.component';
 import { FlashcardListItemComponent } from './flashcard-list-overview/flashcard-lists/flashcard-list-item/flashcard-list-item.component';
+import { FlashcardListSelectComponent } from './flashcards/flashcard-list-select/flashcard-list-select.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FlashcardListItemComponent } from './flashcard-list-overview/flashcard-
     FlashcardDisplayComponent,
     FlashcardListsComponent,
     FlashcardListDetailComponent,
-    FlashcardListItemComponent
+    FlashcardListItemComponent,
+    FlashcardListSelectComponent
   ],
   imports: [
     BrowserModule

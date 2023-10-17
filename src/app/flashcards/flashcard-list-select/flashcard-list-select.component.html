@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12">
+    <a
+      href="#"
+      class="list-group-item"
+      *ngFor="let flashcardlist of flashcardlists"
+    >
+      <div class="float-start">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">{{ flashcardlist.listName }}</h4>
+            <p class="card-text">{{ flashcardlist.listDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <app-flashcard-list-item></app-flashcard-list-item>
+</div>
