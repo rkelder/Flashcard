@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-flashcard-list-overview',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./flashcard-list-overview.component.scss']
 })
 export class FlashcardListOverviewComponent {
+
 
 }
