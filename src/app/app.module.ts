@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { FlashcardComponent } from './flashcards/flashcard/flashcard.component';
 import { FlashcardListSelectComponent } from './flashcards/flashcard-list-select/flashcard-list-select.component';
+import { RehearseComponent } from './rehearse/rehearse.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FlashcardListSelectComponent } from './flashcards/flashcard-list-select
     FlashcardsComponent,
     FlashcardComponent,
     FlashcardListSelectComponent,
+    RehearseComponent,
   ],
   imports: [BrowserModule],
   providers: [],

@@ -1,39 +1,51 @@
-<br />
-<div class="row flashcardlists">
-  <div class="col-md-5 flashcardlistoverview">
-    <a
-      href="#"
-      class="list-group-item"
-      *ngFor="let flashcardlist of flashcardlists"
-    >
-      <div class="float-start">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">{{ flashcardlist.listName }}</h4>
-            <p class="card-text">{{ flashcardlist.listDescription }}</p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-7 manageflashcardlist">
-    <div class="row">
-      <div class="col-12">
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle">
-            Manage Flashcardlist
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Edit Flashcardlist</a>
-            </li>
-            <li>
-              <a href="#">Delete Flashcardlist</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<div class="container">
+  <br>
+  <!-- Row for 'Add Flashcardlist' button -->
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-success">Add Flashcardlist</button>
     </div>
   </div>
+  <hr>
+  <br>
+
+  <!-- Row for flashcardlists and 'Manage Flashcardlist' buttons -->
+  <div class="row">
+    <div class="col-12">
+      <div>
+        <a
+          href="#"
+          class="list-group-item list-group-item-action"
+          *ngFor="let flashcardlist of flashcardlists"
+        >
+          <div class="float-start">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">{{ flashcardlist.listName }}</h4>
+                <p class="card-text">{{ flashcardlist.listDescription }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 'Manage Flashcardlist' button next to each rendered flashcardlist -->
+          <div class="float-end">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle">
+                Manage Flashcardlist
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Edit Flashcardlist</a>
+                </li>
+                <li>
+                  <a href="#">Delete Flashcardlist</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+</div>
 </div>

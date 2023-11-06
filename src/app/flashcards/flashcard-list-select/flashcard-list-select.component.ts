@@ -13,6 +13,10 @@ export class FlashcardListSelectComponent implements OnInit {
       new Flashcard(1, 'Hello', 'World'),
       new Flashcard(2, 'Goodbye', 'World'),
     ]),
+    new FlashcardList('List 2', 'This is the second list', 2, [
+      new Flashcard(1, 'Hello', 'World'),
+      new Flashcard(2, 'Goodbye', 'World'),
+    ])
   ];
 
   constructor() {}
