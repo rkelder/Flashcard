@@ -1,1 +1,43 @@
-<p>flashcard works!</p>
+<br />
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="front">Front</label>
+          <input type="text" id="front" class="form-control" />
+        </div>
+        <div class="col-sm-5 form-group">
+          <label for="back">Back</label>
+          <input type="text" id="back" class="form-control" />
+        </div>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-success" type="submit">Add</button>
+          <button class="btn btn-danger" type="button">Delete</button>
+          <button class="btn btn-primary" type="button">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-12">
+    <a
+      href="#"
+      class="list-group-item"
+      *ngFor="let flashcardlist of flashcardlists"
+    >
+      <div class="float-start">
+        <div class="card" *ngFor="let flashcard of flashcardlist.flashcards">
+          <div class="card-body">
+            <div>
+              <p class="card-title">{{ flashcard.question }}</p>
+              <p class="card-text">{{ flashcard.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

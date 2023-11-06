@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FlashcardList } from 'src/app/flashcard-list-overview/flashcardList.model';
-FlashcardList
+import { FlashcardList } from 'src/app/shared/flashcardList.model';
+import { Flashcard } from 'src/app/shared/flashcard.model';
 
 @Component({
   selector: 'app-flashcard-list-select',
@@ -9,7 +9,10 @@ FlashcardList
 })
 export class FlashcardListSelectComponent implements OnInit {
   flashcardlists: FlashcardList[] = [
-    new FlashcardList('List 1', 'This is the first list', 1, []),
+    new FlashcardList('List 1', 'This is the first list', 1, [
+      new Flashcard(1, 'Hello', 'World'),
+      new Flashcard(2, 'Goodbye', 'World'),
+    ]),
   ];
 
   constructor() {}

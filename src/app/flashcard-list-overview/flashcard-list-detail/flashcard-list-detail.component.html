@@ -1,31 +1,36 @@
-<div class="row">
-  <div class="col-12">
-    <h1>Flashcardlist Name</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12">
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle">
-        Manage Flashcardlist
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li>
-          <a href="#">Edit Flashcardlist</a>
-        </li>
-        <li>
-          <a href="#">Delete Flashcardlist</a>
-        </li>
-      </ul>
+<br />
+<br />
+<br />
+<div class="row" *ngFor="let flashcardlist of flashcardlists">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ flashcardlist.listName }}</h1>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-12">
-    <p>Flashcardlist Description</p>
+  <div class="row">
+    <div class="col-12">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle">
+          Manage Flashcardlist
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Edit Flashcardlist</a>
+          </li>
+          <li>
+            <a href="#">Delete Flashcardlist</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-12">Flashcards</div>
+  <div class="row">
+    <div class="col-12">
+      <p>{{ flashcardlist.listDescription }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">{{ flashcardlist.flashcards }}</div>
+  </div>
 </div>
