@@ -3,19 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FlashcardsComponent } from './flashcards/flashcards.component';
-import { FlashcardComponent } from './flashcards/flashcard/flashcard.component';
-import { FlashcardListSelectComponent } from './flashcards/flashcard-list-select/flashcard-list-select.component';
+import { FlashcardEditComponent } from './flashcard-edit/flashcard-edit.component';
+import { FlashcardComponent } from './flashcard-edit/flashcard/flashcard.component';
+import { FlashcardListSelectComponent } from './flashcard-edit/flashcard-list-select/flashcard-list-select.component';
 import { RehearseComponent } from './rehearse/rehearse.component';
+import { FlashcardlistEditComponent } from './flashcardlist-edit/flashcardlist-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FlashcardsComponent,
+    FlashcardEditComponent,
     FlashcardComponent,
     FlashcardListSelectComponent,
     RehearseComponent,
+    FlashcardlistEditComponent,
   ],
   imports: [BrowserModule],
   providers: [],
