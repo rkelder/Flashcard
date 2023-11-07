@@ -1,1 +1,33 @@
-<p>flashcardlist-add works!</p>
+<div class="container">
+  <!-- Row for 'Add Flashcardlist' button -->
+  <div class="row addlistbutton">
+    <div>
+      <button class="btn btn-success" (click)="onSelect()">
+        Add Flashcardlist
+      </button>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="addSelected === true">
+    <form>
+      <div class="col inputs">
+        <div class="listnameinput">
+          <label for="front">Flashcard List Name</label>
+          <input type="text" id="listname" class="form-control" />
+        </div>
+        
+        <div class="col listdescriptioninput">
+          <label for="back">Flashcard List Description</label>
+          <input type="text" id="listdescription" class="form-control" />
+        </div>
+</div>
+    </form>
+    <div class="row">
+        <div class="managebuttons">
+          <button class="btn btn-success" type="submit">Add</button>
+          <button class="btn btn-primary" type="button">Clear</button>
+        </div>
+        </div>
+  </div>
+</div>
+<hr />

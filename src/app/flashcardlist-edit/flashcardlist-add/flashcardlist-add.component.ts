@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-flashcardlist-add',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class FlashcardlistAddComponent {
 
+addSelected = false
+
+  onSelect() {
+    this.addSelected = !this.addSelected;
+  }
 }

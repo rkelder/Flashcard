@@ -1,9 +1,14 @@
 <app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <app-flashcard-edit *ngIf="loadedFeature === 'flashcards'"></app-flashcard-edit>
-      <app-rehearse *ngIf = "loadedFeature === 'rehearse'"></app-rehearse>
+    <div>
+      <app-flashcard-edit
+        *ngIf="loadedFeature === 'flashcards'"
+      ></app-flashcard-edit>
+      <app-rehearse *ngIf="loadedFeature === 'rehearse'"></app-rehearse>
+      <app-flashcardlist-edit
+        *ngIf="loadedFeature === 'flashcardlists'"
+      ></app-flashcardlist-edit>
     </div>
   </div>
 </div>

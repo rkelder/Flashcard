@@ -10,7 +10,8 @@ import { RehearseComponent } from './rehearse/rehearse.component';
 import { FlashcardlistEditComponent } from './flashcardlist-edit/flashcardlist-edit.component';
 import { FlashcardlistItemComponent } from './flashcard-edit/flashcard-list-select/flashcardlist-item/flashcardlist-item.component';
 import { FlashcardlistAddComponent } from './flashcardlist-edit/flashcardlist-add/flashcardlist-add.component';
-import { FlashcardlistManageComponent } from './flashcardlist-edit/flashcardlist-add/flashcardlist-manage/flashcardlist-manage.component';
+import { FlashcardlistManageComponent } from './flashcardlist-edit/flashcardlist-manage/flashcardlist-manage.component';
+import { FlashcardlistDisplayComponent } from './flashcardlist-edit/flashcardlist-display/flashcardlist-display.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FlashcardlistManageComponent } from './flashcardlist-edit/flashcardlist
     FlashcardlistItemComponent,
     FlashcardlistAddComponent,
     FlashcardlistManageComponent,
+    FlashcardlistDisplayComponent,
   ],
   imports: [BrowserModule],
   providers: [],

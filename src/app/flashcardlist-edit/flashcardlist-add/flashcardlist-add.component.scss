@@ -1,0 +1,45 @@
+.container {
+  min-width: 600px;
+  width: 600px;
+}
+
+.addlistbutton {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: left;
+}
+
+.listnameinput {
+  max-width: 250px;
+  width: 250px;
+  margin-right: 5px;
+}
+
+.listdescriptioninput {
+  max-width: 250px;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.managebuttons {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 75px;
+  margin-right: 20px;
+}
+  .managebuttons button {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .managebuttons button:first-child {
+    margin-left: 0;
+  }
+
+  .managebuttons button:last-child {
+    margin-left: 155px;
+  }
