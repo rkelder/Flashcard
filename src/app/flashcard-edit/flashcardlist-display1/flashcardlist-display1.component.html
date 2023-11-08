@@ -1,9 +1,18 @@
-<div class="row">
-    <div class="col-xs-12">
-      <app-flashcardlist-item
-        *ngFor="let flashcardlistEl of flashcardlists"
-        [flashcardlist]="flashcardlistEl"
-      ></app-flashcardlist-item>
-    </div>
+<div class="selectlistandviewflashcards">
+  <div>
+    <p>Select a flashcardlist</p>
+    <select [(ngModel)]="selectedFlashcardlistIndex">
+      <option [value]="null">Select a flashcardlist</option>
+      <option
+        *ngFor="let flashcardlistEl of flashcardlists; let i = index"
+        [value]="i"
+      >
+        {{ flashcardlistEl.listName }}
+      </option>
+    </select>
   </div>
-  
+  <div *ngIf="selectedFlashcardlist">
+    <p>{{ selectedFlashcardlist.listName }}</p>
+    <p>{{ selectedFlashcardlist.listDescription }}</p>
+  </div>
+</div>

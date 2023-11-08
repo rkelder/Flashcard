@@ -5,9 +5,14 @@ import { Flashcard } from 'src/app/shared/flashcard.model';
 @Component({
   selector: 'app-flashcardlist-display1',
   templateUrl: './flashcardlist-display1.component.html',
-  styleUrls: ['./flashcardlist-display1.component.scss']
+  styleUrls: ['./flashcardlist-display1.component.scss'],
 })
 export class FlashcardlistDisplay1Component {
+  selectedFlashcardlistIndex: number;
+  
+  get selectedFlashcardlist(): FlashcardList {
+    return this.flashcardlists[this.selectedFlashcardlistIndex];
+  }
 
   flashcardlists: FlashcardList[] = [
     new FlashcardList('List 1', 'This is the first list', 1, [
@@ -23,5 +28,4 @@ export class FlashcardlistDisplay1Component {
       new Flashcard(2, 'Goodbye', 'World'),
     ]),
   ];
-
 }
