@@ -5,41 +5,30 @@
 
 .addlistbutton {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .inputs {
   display: flex;
+  flex-direction: column;
   justify-content: left;
+  max-width: 250px;
+  width: 250px;
 }
 
 .listnameinput {
-  max-width: 250px;
-  width: 250px;
-  margin-right: 5px;
+  margin-bottom: 20px;
 }
 
 .listdescriptioninput {
-  max-width: 250px;
-  width: 250px;
-  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .managebuttons {
   display: flex;
-  margin-top: 20px;
-  margin-bottom: 75px;
-  margin-right: 20px;
+  margin-bottom: 50px;
 }
-  .managebuttons button {
-    width: 100px;
-    margin-right: 10px;
-  }
-
-  .managebuttons button:first-child {
-    margin-left: 0;
-  }
-
-  .managebuttons button:last-child {
-    margin-left: 155px;
-  }
+.managebuttons button {
+  width: 100px;
+  margin-right: 50px;
+}

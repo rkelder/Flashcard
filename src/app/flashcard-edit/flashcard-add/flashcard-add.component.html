@@ -20,24 +20,3 @@
     </form>
   </div>
 </div>
-<br />
-<div class="row">
-  <div class="col-12">
-    <a
-      href="#"
-      class="list-group-item"
-      *ngFor="let flashcardlist of flashcardlists"
-    >
-      <div class="float-start">
-        <div class="card" *ngFor="let flashcard of flashcardlist.flashcards">
-          <div class="card-body">
-            <div>
-              <p class="card-title">{{ flashcard.question }}</p>
-              <p class="card-text">{{ flashcard.answer }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
