@@ -6,11 +6,19 @@
 -->
 
 <div class="container">
-  <div class="flashcardlist-add">
+  <div class="flashcardlistAdd">
     <app-flashcardlist-add></app-flashcardlist-add>
   </div>
   <div class="displayandmanage">
-    <app-flashcardlist-display2></app-flashcardlist-display2>
-    <app-flashcardlist-manage></app-flashcardlist-manage>
+    <app-flashcardlist-display2
+      (flashcardlistWasSelected)="selectedFlashcardlist = $event"
+    ></app-flashcardlist-display2>
+    <app-flashcardlist-manage
+      [flashcardlist]="selectedFlashcardlist"
+      *ngIf="selectedFlashcardlist; else infoText"
+    ></app-flashcardlist-manage>
+    <ng-template #infoText>
+      <p class="infoText">Please select a flashcardlist to edit it.</p>
+    </ng-template>
   </div>
 </div>

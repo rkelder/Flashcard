@@ -13,11 +13,16 @@
       <div class="inputs">
         <div class="listnameinput">
           <label for="front">Flashcard List Name</label>
-          <input type="text" id="listname" class="form-control" />
+          <input type="text" id="listname" class="form-control" #nameInput />
         </div>
         <div class="listdescriptioninput">
           <label for="back">Flashcard List Description</label>
-          <input type="text" id="listdescription" class="form-control" />
+          <input
+            type="text"
+            id="listdescription"
+            class="form-control"
+            #descriptionInput
+          />
         </div>
       </div>
     </form>
@@ -29,4 +34,3 @@
     </div>
   </div>
 </div>
-<hr />

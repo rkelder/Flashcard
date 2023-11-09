@@ -1,6 +1,9 @@
 .flashcardlist-overview {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  overflow: auto;
+  max-height: 1000px;
 }
 
 .flashcardlist {
@@ -10,15 +13,14 @@
   border-radius: 10px;
 }
 
-.listname {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0.5rem;
-    text-align: center;
+a {
+  text-decoration: none;
 }
+.listname {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-align: center;
+  color: blue;
 
-.listdescription {
-    font-size: 1rem;
-    padding: 0.5rem;
-    text-align: center;
 }

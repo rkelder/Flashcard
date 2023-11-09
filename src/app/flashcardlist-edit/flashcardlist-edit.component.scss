@@ -1,10 +1,11 @@
-.flashcardlist-add {
-  display: grid;
-}
-
 .displayandmanage {
-  max-width: 800px;
+  width: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+}
+
+.infoText {
+  margin-top: 25px;
+  text-align: right;
 }

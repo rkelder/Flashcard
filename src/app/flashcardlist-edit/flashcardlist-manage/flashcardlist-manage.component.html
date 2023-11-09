@@ -1,26 +1,33 @@
-  <!-- Row for flashcardlists and 'Manage Flashcardlist' buttons -->
-  <div class="row">
-    <div class="col-12">
-      <div>
-
-
-          <!-- 'Manage Flashcardlist' button next to each rendered flashcardlist -->
-          <div class="float-end">
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle">
-                Manage Flashcardlist
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Edit Flashcardlist</a>
-                </li>
-                <li>
-                  <a href="#">Delete Flashcardlist</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+<!-- 'Manage Flashcardlist' button next to the rendered flashcardlists -->
+<div class="flashcardlistcontents">
+  <form>
+    <div class="inputs">
+      <div class="listnameinput">
+        <label for="front">Flashcard List Name</label>
+        <input
+          type="text"
+          id="listname"
+          class="form-control"
+          [placeholder]="flashcardlist.listName"
+        />
+      </div>
+      <div class="listdescriptioninput">
+        <label for="back">Flashcard List Description</label>
+        <textarea
+          id="listdescription"
+          class="form-control"
+          [placeholder]="flashcardlist.listDescription"
+        ></textarea>
+      </div>
+      <div class="buttons">
+        <div class="managebuttons">
+          <button class="btn btn-success" type="submit">Save</button>
+          <button class="btn btn-primary" type="button">Clear</button>
+        </div>
+        <div class="deletebutton">
+          <button class="btn btn-danger" type="button">Delete</button>
+        </div>
       </div>
     </div>
+  </form>
 </div>

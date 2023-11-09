@@ -1,8 +1,12 @@
-<div class="row">
-  <div class="col-xs-12">
-    <app-flashcardlist-item
+<div>
+  <div>
+    <h4>Flashcard Lists</h4>
+    <div class="flashcardlist-display">
+      <app-flashcardlist-item class="flashcardlist-item"
       *ngFor="let flashcardlistEl of flashcardlists"
       [flashcardlist]="flashcardlistEl"
-    ></app-flashcardlist-item>
+      (flashcardlistSelected)="onFlashcardlistSelected(flashcardlistEl)"
+      ></app-flashcardlist-item>
+    </div>
   </div>
 </div>
