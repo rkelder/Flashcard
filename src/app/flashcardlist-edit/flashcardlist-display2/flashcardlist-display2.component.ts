@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Flashcard } from 'src/app/shared/flashcard.model';
+import { Component, OnInit } from '@angular/core';
 import { FlashcardList } from 'src/app/shared/flashcardList.model';
+import { FlashcardlistService } from 'src/app/shared/flashcardlist.service';
 
 @Component({
   selector: 'app-flashcardlist-display2',
@@ -8,28 +8,17 @@ import { FlashcardList } from 'src/app/shared/flashcardList.model';
   styleUrls: ['./flashcardlist-display2.component.scss'],
 })
 export class FlashcardlistDisplay2Component implements OnInit {
-  @Output() flashcardlistWasSelected = new EventEmitter<FlashcardList>();
+  flashcardlists: FlashcardList[];
 
-  flashcardlists: FlashcardList[] = [
-    new FlashcardList('List 1', 'This is the first list', 1, [
-      new Flashcard(1, 'Hello', 'World'),
-      new Flashcard(2, 'Goodbye', 'World'),
-    ]),
-    new FlashcardList('List 2', 'This is the second list', 2, [
-      new Flashcard(1, 'Hello', 'World'),
-      new Flashcard(2, 'Goodbye', 'World'),
-    ]),
-    new FlashcardList('List 3', 'This is the third list', 3, [
-      new Flashcard(1, 'Hello', 'World'),
-      new Flashcard(2, 'Goodbye', 'World'),
-    ]),
-  ];
+  constructor(private flashcardlistService: FlashcardlistService) {}
 
-  constructor() {}
-
-  ngOnInit() {}
-
-  onFlashcardlistSelected(flashcardlist: FlashcardList) {
-    this.flashcardlistWasSelected.emit(flashcardlist);
+  ngOnInit() {
+    this.flashcardlists = this.flashcardlistService.getFlashcardLists();
+    this.flashcardlistService.flashcardlistChanged
+    .subscribe(
+      (flashcardlists: FlashcardList[]) => 
+      {
+        this.flashcardlists = flashcardlists;
+      });
   }
 }
