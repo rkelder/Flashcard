@@ -14,7 +14,6 @@ import { FlashcardlistManageComponent } from './flashcardlist-edit/flashcardlist
 import { FlashcardlistDisplay2Component } from './flashcardlist-edit/flashcardlist-display2/flashcardlist-display2.component';
 import { FlashcardlistDisplay1Component } from './flashcard-edit/flashcardlist-display1/flashcardlist-display1.component';
 import { FlashcardDisplayItemComponent } from './flashcard-edit/flashcardlist-display1/flashcard-display-item/flashcard-display-item.component';
-import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { DropdownDirective } from './shared/dropdown.directive';
     FlashcardlistDisplay2Component,
     FlashcardlistDisplay1Component,
     FlashcardDisplayItemComponent,
-    DropdownDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

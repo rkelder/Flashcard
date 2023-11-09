@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FlashcardlistService } from './shared/flashcardlist.service';
+import { FlashcardlistService } from './flashcardlist-edit/flashcardlist.service';
 
 @Component({
   selector: 'app-root',

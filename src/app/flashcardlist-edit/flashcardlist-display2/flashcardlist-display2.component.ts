@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashcardList } from 'src/app/shared/flashcardList.model';
-import { FlashcardlistService } from 'src/app/shared/flashcardlist.service';
+import { FlashcardlistService } from 'src/app/flashcardlist-edit/flashcardlist.service';
 
 @Component({
   selector: 'app-flashcardlist-display2',
@@ -14,11 +14,10 @@ export class FlashcardlistDisplay2Component implements OnInit {
 
   ngOnInit() {
     this.flashcardlists = this.flashcardlistService.getFlashcardLists();
-    this.flashcardlistService.flashcardlistChanged
-    .subscribe(
-      (flashcardlists: FlashcardList[]) => 
-      {
+    this.flashcardlistService.flashcardlistChanged.subscribe(
+      (flashcardlists: FlashcardList[]) => {
         this.flashcardlists = flashcardlists;
-      });
+      }
+    );
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashcardList } from '../shared/flashcardList.model';
-import { FlashcardlistService } from '../shared/flashcardlist.service';
+import { FlashcardlistService } from './flashcardlist.service';
 
 @Component({
   selector: 'app-flashcardlist-edit',

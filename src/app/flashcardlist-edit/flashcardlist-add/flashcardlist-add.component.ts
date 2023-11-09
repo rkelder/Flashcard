@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FlashcardList } from 'src/app/shared/flashcardList.model';
-import { FlashcardlistService } from 'src/app/shared/flashcardlist.service';
+import { FlashcardlistService } from 'src/app/flashcardlist-edit/flashcardlist.service';
 
 @Component({
   selector: 'app-flashcardlist-add',
