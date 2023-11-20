@@ -1,0 +1,32 @@
+.forminputs {
+  max-width: 250px;
+}
+
+.question {
+  margin-bottom: 1px;
+}
+
+.question input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.answer {
+  margin-bottom: 10px;
+}
+
+.answer input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modifyquestions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modifyquestions button {
+  margin-right: 10px;
+
+}

@@ -29,3 +29,5 @@ export interface FlashcardInterface {
   term: string;
   meaning: string;
 }
+
+ 

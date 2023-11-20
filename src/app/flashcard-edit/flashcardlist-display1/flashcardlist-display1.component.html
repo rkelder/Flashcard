@@ -1,6 +1,6 @@
 <div class="selectlistandviewflashcards">
-  <div>
-    <p>Select a flashcardlist</p>
+  <div class="select">
+    <h4>Select a flashcardlist</h4>
     <select [(ngModel)]="selectedFlashcardlistIndex">
       <option [value]="null">Select a flashcardlist</option>
       <option
@@ -10,9 +10,17 @@
         {{ flashcardlistEl.listName }}
       </option>
     </select>
+    <app-flashcard-add></app-flashcard-add>
   </div>
-  <div *ngIf="selectedFlashcardlist">
-    <p>{{ selectedFlashcardlist.listName }}</p>
-    <p>{{ selectedFlashcardlist.listDescription }}</p>
+  <div *ngIf="selectedFlashcardlist" class="listandbox">
+    <div class="selectedlist">
+      <h4>{{selectedFlashcardlist.listName}}</h4>
+      <p>{{selectedFlashcardlist.listDescription}}</p>
+    </div>
+    <div class="flashcard-box">
+      <app-flashcard-display-item
+      *ngFor="let flashcardEl of selectedFlashcardlist.flashcards"
+      [flashcard]="flashcardEl"></app-flashcard-display-item>
+    </div>
   </div>
 </div>

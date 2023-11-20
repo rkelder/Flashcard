@@ -1,4 +1,43 @@
 .selectlistandviewflashcards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.select {
+  max-width: 300px;
+  width: 300px;
+}
+
+.select select {
+  margin-bottom: 25px;
+}
+
+.select h4 {
+  margin-bottom: 25px;
+}
+
+.listandbox {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.selectedlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flashcard-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px; /* Adjust the height according to your needs */
+  max-width: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd; /* Border for the entire flashcard box */
+  padding: 10px;
+  border-radius: 10px;
 }

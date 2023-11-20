@@ -15,8 +15,8 @@ export class FlashcardlistDisplay2Component implements OnInit {
   ngOnInit() {
     this.flashcardlists = this.flashcardlistService.getFlashcardLists();
     this.flashcardlistService.flashcardlistChanged.subscribe(
-      (flashcardlists: FlashcardList[]) => {
-        this.flashcardlists = flashcardlists;
+      (subscribedflashcardlists: FlashcardList[]) => {
+        this.flashcardlists = subscribedflashcardlists;
       }
     );
   }
