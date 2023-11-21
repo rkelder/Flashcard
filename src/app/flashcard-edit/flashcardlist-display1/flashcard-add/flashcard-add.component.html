@@ -1,23 +1,40 @@
-      <div class="forminputs">
-        <form>
-        <div class="question">
-          <label for="front">Question:</label>
-          <input type="text" id="question" class="form-control" placeholder="Please enter your question" />
-        </div>
-        <div class="answer">
-          <label for="back">Answer:</label>
-          <input type="text" id="answer" class="form-control" placeholder="Please enter your answer"/>
-        </div>
-        <div class="modifyquestions">
-          <div>
-            <button class="btn btn-success" type="submit">Add</button>
-            <button class="btn btn-primary" type="button">Clear</button>
-          </div>
-            <div>
-              <button class="btn btn-danger" type="button">Delete</button>
-            </div>
-
-        </div>
-      </form>
+<div class="forminputs">
+  <form>
+    <div class="question">
+      <label for="front">Question:</label>
+      <input
+        type="text"
+        id="question"
+        class="form-control"
+        placeholder="Please enter your question"
+        [(ngModel)]="question"
+        name="question"
+      />
+    </div>
+    <div class="answer">
+      <label for="back">Answer:</label>
+      <input
+        type="text"
+        id="answer"
+        class="form-control"
+        placeholder="Please enter your answer"
+        [(ngModel)]="answer"
+        name="answer"
+      />
+    </div>
+    <div class="modifyquestions">
+      <div>
+        <button
+          class="btn btn-success"
+          type="submit"
+          (click)="onAddFlashcard()"
+        >
+          Add
+        </button>
       </div>
-
+      <div>
+        <button class="btn btn-danger" type="button">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>

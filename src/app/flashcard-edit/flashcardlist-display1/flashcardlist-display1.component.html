@@ -10,7 +10,7 @@
         {{ flashcardlistEl.listName }}
       </option>
     </select>
-    <app-flashcard-add></app-flashcard-add>
+    <app-flashcard-add (flashcardAdded)="onFlashcardAdded($event)"></app-flashcard-add>
   </div>
   <div *ngIf="selectedFlashcardlist" class="listandbox">
     <div class="selectedlist">

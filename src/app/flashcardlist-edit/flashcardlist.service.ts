@@ -10,23 +10,11 @@ export class FlashcardlistService {
 
   flashcardlists: FlashcardList[] = [
     new FlashcardList('Korean Vocabulary', 'Beginner Korean, Volume 1', 1, [
-      new Flashcard(1, '안녕하세요', 'Hello'),
-      new Flashcard(2, '안녕히가세요', 'Goodbye (staying)'),
-      new Flashcard(2, '안녕히계세요', 'Goodbye (leaving)'),
-      new Flashcard(2, '잘 먹겠습니다', 'Have a nice meal'),
-      new Flashcard(2, '맛있게 드세요 ', 'Have a nice meal (honorific)'),
-    ]),
-    new FlashcardList('List 2', 'This is the second list', 2, [
-      new Flashcard(1, 'Bonjour', 'World'),
-      new Flashcard(2, 'Au Revoir', 'World'),
-    ]),
-    new FlashcardList('List 3', 'This is the third list', 3, [
-      new Flashcard(1, 'Hallo', 'World'),
-      new Flashcard(2, 'Auf Wiedersehen', 'World'),
-    ]),
-    new FlashcardList('List 4', 'This is the fourth list', 4, [
-      new Flashcard(1, 'Hallo', 'World'),
-      new Flashcard(2, 'Tot ziens', 'World'),
+      new Flashcard(1, '안녕하세요', 'Hello', 1),
+      new Flashcard(2, '안녕히가세요', 'Goodbye (staying)', 1),
+      new Flashcard(3, '안녕히계세요', 'Goodbye (leaving)', 1),
+      new Flashcard(4, '잘 먹겠습니다', 'Have a nice meal', 1),
+      new Flashcard(5, '맛있게 드세요 ', 'Have a nice meal (honorific)', 1),
     ]),
   ];
 
@@ -39,5 +27,12 @@ export class FlashcardlistService {
     this.flashcardlistChanged.emit(this.flashcardlists.slice());
     console.log(this.flashcardlists);
   }
-}
 
+  
+  addFlashcardToFlashcardList(index: number, flashcard: Flashcard) {
+    if (index >= 0 && index < this.flashcardlists.length) {
+      this.flashcardlists[index].flashcards.push(flashcard);
+      this.flashcardlistChanged.emit(this.flashcardlists.slice());
+  }
+}
+}

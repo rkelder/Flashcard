@@ -5,6 +5,7 @@ export class FlashcardList {
   public listDescription: string;
   public listID: number;
   public flashcards: Flashcard[];
+  id: number;
 
   constructor(
     listName: string,

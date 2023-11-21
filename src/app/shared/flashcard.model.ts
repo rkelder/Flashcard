@@ -18,12 +18,14 @@ export class Flashcard {
   constructor(
     public id: number,
     public question: string,
-    public answer: string // difficulty: number, // repetitions: number, // lastRepetition: Date, // interval: number,
-  ) // listId: number
+    public answer: string,
+    public listId: number // listId: number
+  ) // difficulty: number, // repetitions: number, // lastRepetition: Date, // interval: number,
   {
     this.id = id;
     this.question = question;
     this.answer = answer;
+    this.listId = listId;
     // this.difficulty = difficulty;
     // this.repetitions = repetitions;
     // this.lastRepetition = lastRepetition;
