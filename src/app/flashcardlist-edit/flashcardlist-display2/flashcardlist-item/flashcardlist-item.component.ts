@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FlashcardList } from 'src/app/shared/flashcardList.model';
+import { FlashcardlistService } from 'src/app/flashcardlist-edit/flashcardlist.service';
 
 @Component({
   selector: 'app-flashcardlist-item',
@@ -9,13 +10,11 @@ import { FlashcardList } from 'src/app/shared/flashcardList.model';
 export class FlashcardlistItemComponent implements OnInit {
   @Input() flashcardlist: FlashcardList;
 
-  @Output() flashcardlistSelected = new EventEmitter<void>();
-
-  constructor() {}
+  constructor(private flashcardlistService: FlashcardlistService) {}
 
   ngOnInit() {}
 
   onSelected() {
-    this.flashcardlistSelected.emit();
+    this.flashcardlistService.flashcardlistSelected.emit(this.flashcardlist);
   }
 }

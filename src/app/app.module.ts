@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FlashcardEditComponent } from './flashcard-edit/flashcard-edit.component';
-import { FlashcardAddComponent } from './flashcard-edit/flashcard-add/flashcard-add.component';
+import { FlashcardAddComponent } from './flashcard-edit/flashcardlist-display1/flashcard-add/flashcard-add.component';
 import { RehearseComponent } from './rehearse/rehearse.component';
 import { FlashcardlistEditComponent } from './flashcardlist-edit/flashcardlist-edit.component';
 import { FlashcardlistItemComponent } from './flashcardlist-edit/flashcardlist-display2/flashcardlist-item/flashcardlist-item.component';

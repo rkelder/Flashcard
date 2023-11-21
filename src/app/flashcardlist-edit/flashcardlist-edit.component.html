@@ -10,9 +10,7 @@
     <app-flashcardlist-add></app-flashcardlist-add>
   </div>
   <div class="displayandmanage">
-    <app-flashcardlist-display2
-      (flashcardlistWasSelected)="selectedFlashcardlist = $event"
-    ></app-flashcardlist-display2>
+    <app-flashcardlist-display2></app-flashcardlist-display2>
     <app-flashcardlist-manage
       [flashcardlist]="selectedFlashcardlist"
       *ngIf="selectedFlashcardlist; else infoText"

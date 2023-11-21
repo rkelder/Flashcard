@@ -7,7 +7,7 @@ import { FlashcardList } from 'src/app/shared/flashcardList.model';
   styleUrls: ['./flashcardlist-manage.component.scss'],
 })
 export class FlashcardlistManageComponent implements OnInit {
-  @Input() flashcardlist: FlashcardList
+  @Input() flashcardlist: FlashcardList;
 
   constructor() {}
 

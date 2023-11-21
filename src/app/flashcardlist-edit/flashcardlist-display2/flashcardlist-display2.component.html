@@ -2,10 +2,10 @@
   <div>
     <h4>Flashcard Lists</h4>
     <div class="flashcardlist-display">
-      <app-flashcardlist-item class="flashcardlist-item"
-      *ngFor="let flashcardlistEl of flashcardlists"
-      [flashcardlist]="flashcardlistEl"
-      (flashcardlistSelected)="onFlashcardlistSelected(flashcardlistEl)"
+      <app-flashcardlist-item
+        class="flashcardlist-item"
+        *ngFor="let flashcardlistEl of flashcardlists"
+        [flashcardlist]="flashcardlistEl"
       ></app-flashcardlist-item>
     </div>
   </div>

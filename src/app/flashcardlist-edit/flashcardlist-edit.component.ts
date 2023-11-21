@@ -1,6 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FlashcardList } from '../shared/flashcardList.model';
-
+import { FlashcardlistService } from './flashcardlist.service';
 
 @Component({
   selector: 'app-flashcardlist-edit',
@@ -12,9 +12,17 @@ export class FlashcardlistEditComponent {
 
   selectedFlashcardlist: FlashcardList;
 
-
   onFlashcardlistSelected(flashcardlist: FlashcardList) {
     this.selectedFlashcardlist = flashcardlist;
   }
 
+  constructor(private flashcardlistService: FlashcardlistService) {}
+
+  ngOnInit() {
+    this.flashcardlistService.flashcardlistSelected.subscribe(
+      (flashcardlist: FlashcardList) => {
+        this.selectedFlashcardlist = flashcardlist;
+      }
+    );
+  }
 }
