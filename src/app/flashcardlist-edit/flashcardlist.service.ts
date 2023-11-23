@@ -9,7 +9,7 @@ export class FlashcardlistService {
   flashcardlistSelected = new EventEmitter<FlashcardList>();
 
   flashcardlists: FlashcardList[] = [
-    new FlashcardList('Korean Vocabulary', 'Beginner Korean, Volume 1', 1, [
+    new FlashcardList('Korean Vocabulary', 'Beginner Korean, Volume 1', 0, [
       new Flashcard(1, '안녕하세요', 'Hello', 1),
       new Flashcard(2, '안녕히가세요', 'Goodbye (staying)', 1),
       new Flashcard(3, '안녕히계세요', 'Goodbye (leaving)', 1),
@@ -23,16 +23,16 @@ export class FlashcardlistService {
   }
 
   addFlashcardList(flashcardlist: FlashcardList) {
+
     this.flashcardlists.push(flashcardlist);
     this.flashcardlistChanged.emit(this.flashcardlists.slice());
     console.log(this.flashcardlists);
   }
 
-  
   addFlashcardToFlashcardList(index: number, flashcard: Flashcard) {
     if (index >= 0 && index < this.flashcardlists.length) {
       this.flashcardlists[index].flashcards.push(flashcard);
       this.flashcardlistChanged.emit(this.flashcardlists.slice());
+    }
   }
-}
 }

@@ -14,6 +14,14 @@ import { FlashcardlistManageComponent } from './flashcardlist-edit/flashcardlist
 import { FlashcardlistDisplay2Component } from './flashcardlist-edit/flashcardlist-display2/flashcardlist-display2.component';
 import { FlashcardlistDisplay1Component } from './flashcard-edit/flashcardlist-display1/flashcardlist-display1.component';
 import { FlashcardDisplayItemComponent } from './flashcard-edit/flashcardlist-display1/flashcard-display-item/flashcard-display-item.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'flashcards', component: FlashcardEditComponent },
+  { path: 'flashcard/:id', component: FlashcardDisplayItemComponent },
+  { path: 'flashcardlists', component: FlashcardlistEditComponent },
+  { path: 'flashcardlists/:listID', component: FlashcardlistItemComponent },
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +38,7 @@ import { FlashcardDisplayItemComponent } from './flashcard-edit/flashcardlist-di
     FlashcardlistDisplay1Component,
     FlashcardDisplayItemComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
 })

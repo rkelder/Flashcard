@@ -14,20 +14,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <!-- 
+          routerLinkActive makes it possible to style links using Angular's router.
+          routerLinkActiveOptions="{exact: true}" makes it possible to style only the active link.
+        -->
+        <li
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#" (click)="onSelect('rehearse')"
             >Rehearse</a
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onSelect('flashcardlists')"
+        </li> -->
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['flashcardlists']"
             >Flashcard Lists</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onSelect('flashcards')"
-            >Flashcards</a
-          >
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['flashcards']">Flashcards</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">

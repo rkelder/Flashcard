@@ -8,9 +8,5 @@ import { FlashcardlistService } from './flashcardlist-edit/flashcardlist.service
   providers: [FlashcardlistService],
 })
 export class AppComponent {
-  loadedFeature = 'flashcardlists';
 
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
 }
